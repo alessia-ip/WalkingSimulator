@@ -737,5 +737,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: EverythingLibrary_Animals_001
       objectReference: {fileID: 0}
+    - target: {fileID: 3928748065754171498, guid: 295652a456156bf46ba18ca0884a050e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8708682
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928748065754171498, guid: 295652a456156bf46ba18ca0884a050e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.232166
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928748065754171498, guid: 295652a456156bf46ba18ca0884a050e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928748065754171498, guid: 295652a456156bf46ba18ca0884a050e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9622583
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928748065754171498, guid: 295652a456156bf46ba18ca0884a050e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.272138
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928748065754171498, guid: 295652a456156bf46ba18ca0884a050e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 148.417
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 295652a456156bf46ba18ca0884a050e, type: 3}
