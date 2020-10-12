@@ -1,9 +1,7 @@
-﻿//copied from mask shader
-
-Shader "Custom/hideShadow"
+﻿Shader "Custom/shader_HIDE"
 {
     Properties{
-    [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 0
+     [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 0
     }
 
         SubShader{

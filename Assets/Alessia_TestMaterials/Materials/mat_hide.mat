@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mat_HIDE
-  m_Shader: {fileID: 4800000, guid: 683254eaa13752a449d35c384acf2279, type: 3}
+  m_Name: mat_hide
+  m_Shader: {fileID: 4800000, guid: 98f36252234114b478421aedb9344470, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
