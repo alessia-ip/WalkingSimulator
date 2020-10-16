@@ -557,6 +557,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 738185233900019863, guid: a0f70dddf92ccfe4096e306de16819cb,
+        type: 3}
+      propertyPath: bobbingAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 738185233900019863, guid: a0f70dddf92ccfe4096e306de16819cb,
+        type: 3}
+      propertyPath: midpoint
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 738185233909732727, guid: a0f70dddf92ccfe4096e306de16819cb,
         type: 3}
       propertyPath: m_Name
