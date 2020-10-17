@@ -21,13 +21,11 @@ public class displayUI : MonoBehaviour
     void Update()
     {
         FadeText();
-        
     }
 
     void OnMouseOver()
     {
         displayInfo = true;
-
     }
 
     void OnMouseExit()
