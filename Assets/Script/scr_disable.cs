@@ -12,13 +12,13 @@ public class scr_disable : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            for(int i = 0; i < toBeTurnedOff.Length; i++)
-            {
-                toBeTurnedOff[i].SetActive(false);
-            }
             for (int i = 0; i < toBeTurnedOn.Length; i++)
             {
                 toBeTurnedOn[i].SetActive(true);
+            }
+            for (int i = 0; i < toBeTurnedOff.Length; i++)
+            {
+                toBeTurnedOff[i].SetActive(false);
             }
         }
     }
