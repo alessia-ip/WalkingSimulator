@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7065990159799536435
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 0
+  color:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 1}
+  center:
+    overrideState: 0
+    value: {x: 0.5, y: 0.5}
+  intensity:
+    overrideState: 1
+    value: 0.369
+  smoothness:
+    overrideState: 1
+    value: 0.255
+  roundness:
+    overrideState: 0
+    value: 1
+  rounded:
+    overrideState: 0
+    value: 0
+  mask:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  opacity:
+    overrideState: 0
+    value: 1
 --- !u!114 &-4651991572462405675
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -15,10 +59,10 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 0
+    value: 1
   filtering:
     overrideState: 0
-    value: {x: 50, y: 95}
+    value: {x: 27.070194, y: 72.07019}
   minLuminance:
     overrideState: 0
     value: 0
@@ -27,7 +71,7 @@ MonoBehaviour:
     value: 0
   keyValue:
     overrideState: 1
-    value: 1
+    value: 1.28
   eyeAdaptation:
     overrideState: 0
     value: 0
@@ -111,7 +155,7 @@ MonoBehaviour:
     value: 0
   contrast:
     overrideState: 1
-    value: 9.3
+    value: 15
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -1363,3 +1407,33 @@ MonoBehaviour:
   settings:
   - {fileID: -3033780057273258889}
   - {fileID: -4651991572462405675}
+  - {fileID: 3821937188079408599}
+  - {fileID: -7065990159799536435}
+--- !u!114 &3821937188079408599
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
+  m_Name: Grain
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  colored:
+    overrideState: 0
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.248
+  size:
+    overrideState: 1
+    value: 0.52
+  lumContrib:
+    overrideState: 0
+    value: 0.8
