@@ -215,7 +215,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62a43906f26b4695a310e5e31521461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bobbingAmount: 0.01
+  bobbingAmount: 0
   midpoint: 0.6
 --- !u!114 &738185233900019861
 MonoBehaviour:
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ee6ff55b4ff41769a43e63bbd8c2ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 6
+  walkSpeed: 3
   runSpeed: 10
   enableRunning: 0
   jumpSpeed: 4
