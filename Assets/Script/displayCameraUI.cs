@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class displayUI : MonoBehaviour
+public class displayCameraUI : MonoBehaviour
 {
 
     public string myString;
-    public Text myText;
+    private Text myText;
     public float fadeTime;
-    public bool displayInfo;
+    private bool displayInfo;
     public KeyCode pickUp;
     public GameObject interactObj;
 
     // Start is called before the first frame update
     void Start()
     {
-        myText = GameObject.Find("Text").GetComponent<Text> ();
+        myText = GameObject.Find("UI").GetComponent<Text> ();
         myText.color = Color.clear;
         
     }
@@ -31,10 +31,6 @@ public class displayUI : MonoBehaviour
         }
         
         FadeText();
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Debug.Log("pressed button");
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -74,6 +70,7 @@ public class displayUI : MonoBehaviour
     void ItemPickUp()
     {
         globalVarStorage.hasCamera = true;
+        globalVarStorage.uiNum = 1;
         displayInfo = false;
         myText.color = Color.clear;
         if(myText.color == Color.clear)

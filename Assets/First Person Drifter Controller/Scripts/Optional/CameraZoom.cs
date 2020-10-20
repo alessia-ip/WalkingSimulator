@@ -12,6 +12,10 @@ public class CameraZoom : MonoBehaviour
 	
 	private float targetFOV;
 	private float baseFOV;
+
+	public GameObject zoomCamera;
+
+	public zoomColorDetect zoomSwitch;
 	
 	void Start ()
 	{
@@ -20,16 +24,24 @@ public class CameraZoom : MonoBehaviour
 	
 	void Update ()
 	{
-		if( Input.GetButton("Fire2") )
-		{
-			targetFOV = zoomFOV;
-		}
-		else
-		{
-			targetFOV = baseFOV;
-		}
-		
-		UpdateZoom();
+		//if (globalVarStorage.hasCamera == true)
+		//{
+			if (Input.GetButton("Fire2"))
+			{
+				targetFOV = zoomFOV;
+				//Debug.Log("test");
+				zoomSwitch.ZoomSwitchRed();
+				zoomCamera.SetActive(true);
+			}
+			else
+			{
+				targetFOV = baseFOV;
+				zoomSwitch.ZoomSwitchBW();
+				zoomCamera.SetActive(false);
+			}
+
+			UpdateZoom();
+		//}
 	}
 	
 	private void UpdateZoom()
