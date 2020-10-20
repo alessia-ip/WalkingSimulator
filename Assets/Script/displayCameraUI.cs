@@ -29,19 +29,19 @@ public class displayCameraUI : MonoBehaviour
         {
             ItemPickUp();
         }
-        
-        FadeText();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         displayInfo = true;
-        Debug.Log("in circle");
+        myText.text = myString;
+        myText.color = Color.white;
     }
 
     private void OnTriggerExit(Collider other)
     {
         displayInfo = false;
+        myText.color = Color.clear;
     }
 
     /*void OnMouseOver()
@@ -59,11 +59,14 @@ public class displayCameraUI : MonoBehaviour
         if (displayInfo)
         {
             myText.text = myString;
-            myText.color = Color.Lerp(myText.color, Color.white, fadeTime * Time.deltaTime);
+            myText.color = Color.white;
+           // myText.color = Color.Lerp(myText.color, Color.white, fadeTime * Time.deltaTime);
         }
         else
         {
-            myText.color = Color.Lerp(myText.color, Color.clear, fadeTime * Time.deltaTime);
+            
+            myText.color = Color.clear;
+            //myText.color = Color.Lerp(myText.color, Color.clear, fadeTime * Time.deltaTime);
         }
     }
 

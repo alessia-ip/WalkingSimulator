@@ -7,16 +7,16 @@ public class globalVarStorage : MonoBehaviour
 {
 
     public static bool hasCamera;
-    public Text uiInput;
-    public string uiText;
+    public Text uiText;
+    public string uiString;
     public float fadeTime;
     public static int uiNum = 0;
     // Start is called before the first frame update
     void Start()
     {
         hasCamera = false; //test to see if player has camera
-        uiInput = GameObject.Find("UI").GetComponent<Text>(); //set uiInput to be the ui text component
-        uiInput.color = Color.clear; //set uiInput to clear
+        uiText = GameObject.Find("UI").GetComponent<Text>(); //set uiText to be the ui text component
+        uiText.color = Color.clear; //set uiText to clear
     }
 
     // Update is called once per frame
@@ -25,10 +25,10 @@ public class globalVarStorage : MonoBehaviour
         //Debug.Log(hasCamera);
         if (uiNum == 1)
         {
-            uiText = "Use *rbs* to zoom";
-            uiInput.text = uiText;
-            uiInput.color = Color.white;
-            //uiInput.color = Color.Lerp(uiInput.color, Color.white, fadeTime * Time.deltaTime);
+            uiString = "Use *rbs* to zoom";
+            uiText.text = uiString;
+            uiText.color = Color.white;
+            //uiText.color = Color.Lerp(uiText.color, Color.white, fadeTime * Time.deltaTime);
             StartCoroutine(UiHide());
 
         }
@@ -39,6 +39,6 @@ public class globalVarStorage : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         uiNum++;
-        uiInput.color = Color.Lerp(uiInput.color, Color.clear, fadeTime * Time.deltaTime);
+        uiText.color = Color.Lerp(uiText.color, Color.clear, fadeTime * Time.deltaTime);
     }
 }
