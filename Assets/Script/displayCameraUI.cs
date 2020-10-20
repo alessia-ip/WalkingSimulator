@@ -73,7 +73,7 @@ public class displayCameraUI : MonoBehaviour
     void ItemPickUp()
     {
         globalVarStorage.hasCamera = true;
-        globalVarStorage.uiNum = 1;
+        displayGlobalUI.uiNum = "zoomHowTo";
         displayInfo = false;
         myText.color = Color.clear;
         if(myText.color == Color.clear)

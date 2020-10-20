@@ -24,24 +24,25 @@ public class CameraZoom : MonoBehaviour
 	
 	void Update ()
 	{
-		//if (globalVarStorage.hasCamera == true)
-		//{
+		//you cant zoom till you have the camera
+		if (globalVarStorage.hasCamera == true)
+		{
 			if (Input.GetButton("Fire2"))
 			{
 				targetFOV = zoomFOV;
 				//Debug.Log("test");
-				zoomSwitch.ZoomSwitchRed();
-				zoomCamera.SetActive(true);
+				zoomSwitch.ZoomSwitchRed(); //see red items when zoom
+				zoomCamera.SetActive(true); //turn on camera on egg so you can see it in mirrors
 			}
 			else
 			{
 				targetFOV = baseFOV;
-				zoomSwitch.ZoomSwitchBW();
-				zoomCamera.SetActive(false);
+				zoomSwitch.ZoomSwitchBW(); //turn off red items and black and white items turn on 
+				zoomCamera.SetActive(false); //turn off zoomCamera
 			}
 
 			UpdateZoom();
-		//}
+		}
 	}
 	
 	private void UpdateZoom()

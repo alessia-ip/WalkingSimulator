@@ -17,7 +17,7 @@ public class scr_teleporter : MonoBehaviour
         {
             playerObject.GetComponent<CharacterController>().enabled = false;
             playerObject.transform.position = teleportENDPOINT.transform.position;
-            playerObject.GetComponent<CharacterController>().enabled = false;
+            playerObject.GetComponent<CharacterController>().enabled = true;
         }
     }
 }
