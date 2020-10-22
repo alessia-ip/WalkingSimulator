@@ -17,11 +17,7 @@ public class scr_leaveRoom01 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            test = true;
-        }
-        if (test)
+        if (globalVarStorage.hasFilm)
         {
             doorCollider.enabled = false;
         }
