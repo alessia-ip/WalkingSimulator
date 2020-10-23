@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camImage: {fileID: 269481184}
+  volume: {fileID: 738185234315948815}
 --- !u!114 &7350794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2002,7 +2003,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1897428
+  m_Name: pb_Mesh42308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52060,7 +52061,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 1591
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
