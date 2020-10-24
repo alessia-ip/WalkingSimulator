@@ -10,6 +10,7 @@ public class scr_KeyObjectDialogue : MonoBehaviour
     public Text uiText;
     public string itemDescription;
     public Text hintUItext;
+    public GameObject hintUIbutton;
     public GameObject hintUIParent;
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +20,8 @@ public class scr_KeyObjectDialogue : MonoBehaviour
         if(other.name == player.name)
         {
             Debug.Log("entered");
-           // hintUItext.text = "Document";
+            hintUItext.text = "Document";
+            hintUIbutton.SetActive(true);
         }
     }
 
@@ -29,7 +31,7 @@ public class scr_KeyObjectDialogue : MonoBehaviour
         {
             if (Input.GetMouseButton(1))
             {
-                //hintUIParent.SetActive(false);
+                hintUIParent.SetActive(false);
                 uiElement.TweenOpen();
                 uiText.text = itemDescription;
             } else
