@@ -14,15 +14,15 @@ public class scr_ItemTweener : MonoBehaviour
     private void Update()
     {
         //this is just to test the tween
-        if (Input.GetKeyDown(KeyCode.Y))
+        /*if (Input.GetKeyDown(KeyCode.Y))
         {
             TweenOpen();
-        }
+        }*/
         //this is just to test the tween
-        if (Input.GetKeyDown(KeyCode.U))
+        /*if (Input.GetKeyDown(KeyCode.U))
         {
             TweenShut();
-        }
+        }*/
     }
 
     public void TweenOpen()
