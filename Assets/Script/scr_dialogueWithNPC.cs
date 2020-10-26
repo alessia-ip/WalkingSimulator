@@ -41,7 +41,15 @@ public class scr_dialogueWithNPC : MonoBehaviour
     private void Update()
     {
 
-        if(dialogueActive == true)
+        if (startNum % 2 == 0) // this will always be the NPC text
+        { 
+            playerUI.TweenShut(); 
+        } else
+        {
+            npcUI.TweenShut();
+        }
+
+            if (dialogueActive == true)
         {
             npcHintUI.TweenShut();
         }
