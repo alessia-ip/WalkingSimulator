@@ -478,8 +478,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Shades of Spring Kevin MacLeod (incompetech.com)
 
-    Licensed under
-    Creative Commons: By Attribution 3.0 License
+    Licensed under Creative
+    Commons: By Attribution 3.0 License
 
     http://creativecommons.org/licenses/by/3.0/'
 --- !u!222 &395952396
@@ -1217,8 +1217,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Sweeter Vermouth Kevin MacLeod (incompetech.com)
 
-    Licensed under
-    Creative Commons: By Attribution 3.0 License
+    Licensed under Creative
+    Commons: By Attribution 3.0 License
 
     http://creativecommons.org/licenses/by/3.0/'
 --- !u!222 &1020758676
@@ -1411,7 +1411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1643221250
 RectTransform:
   m_ObjectHideFlags: 0
