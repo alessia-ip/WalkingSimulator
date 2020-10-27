@@ -10,19 +10,15 @@ public class scr_lastWalkText : MonoBehaviour
 
     public GameObject walkingText;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log(blockHouse.activeInHierarchy);
-        if(blockHouse.activeInHierarchy == false && blockHouse2.activeInHierarchy == false)
-        {
-            walkingText.SetActive(true);
-        }
-    }
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(blockHouse.activeSelf);
+        if (blockHouse.activeSelf == false && blockHouse2.activeSelf == false)
+        {
+            walkingText.SetActive(true);
+        }
     }
 }
