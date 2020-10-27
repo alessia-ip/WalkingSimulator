@@ -9,6 +9,11 @@ public class scr_camOverlay : MonoBehaviour
     public GameObject camImage;
     public PostProcessVolume volume;
 
+    public AudioSource aud;
+    public AudioClip snap;
+
+    bool activated = false;
+
 
     private void Start()
     {
@@ -25,6 +30,11 @@ public class scr_camOverlay : MonoBehaviour
             {
                 chromaticAberration.intensity.value = 1;
             }
+            if(activated == false)
+            {
+                aud.PlayOneShot(snap);
+                activated = true;
+            }
 
         } else
         {
@@ -34,6 +44,7 @@ public class scr_camOverlay : MonoBehaviour
             {
                 chromaticAberration.intensity.value = 0;
             }
+            activated = false;
         }
     }
 }

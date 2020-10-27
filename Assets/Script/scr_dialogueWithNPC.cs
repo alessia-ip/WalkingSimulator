@@ -71,6 +71,7 @@ public class scr_dialogueWithNPC : MonoBehaviour
 
                 playerUI.TweenShut();
                 npcUI.TweenShut();
+                npcHintUI.gameObject.SetActive(true);
 
                 startNum = 0;
 
@@ -115,8 +116,12 @@ public class scr_dialogueWithNPC : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == player.name)
+      
+
+        if (other.name == player.name && dialogueActive == false)
         {
+            npcHintUI.gameObject.SetActive(true);
+
             Debug.Log("entered");
             npcHintUIText.text = npcName;
             npcHintUI.TweenOpen();
@@ -132,9 +137,12 @@ public class scr_dialogueWithNPC : MonoBehaviour
 
             if (Input.GetMouseButton(1) && dialogueActive == false)
             {
+                clicked = true;
+                StartCoroutine(ClickReset());
 
                 Debug.Log("Start Dialogue Opening");
                 npcHintUI.TweenShut();
+                npcHintUI.gameObject.SetActive(false);
 
                 //Turns off player motion control
                 drifter.enabled = false;
@@ -168,6 +176,7 @@ public class scr_dialogueWithNPC : MonoBehaviour
        if(other.name == player.name)
         {
             npcHintUI.TweenShut();
+            npcHintUI.gameObject.SetActive(false);
         }
     }
 
