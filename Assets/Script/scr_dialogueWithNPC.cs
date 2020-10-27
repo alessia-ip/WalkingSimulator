@@ -31,33 +31,34 @@ public class scr_dialogueWithNPC : MonoBehaviour
     //for Sound effects
     public AudioSource soundPlayer;
     public AudioClip npcSOUND;
+    public AudioClip playerSound;
 
+    //for next indicator
+    public GameObject playerNext;
+    public GameObject npcNext;
 
     bool dialogueActive = false;
 
     int startNum = 0;
 
+    bool clicked = false;
 
     private void Update()
     {
 
-        if (startNum % 2 == 0) // this will always be the NPC text
-        { 
-            playerUI.TweenShut(); 
+        if(clicked == true)
+        {
+            playerNext.SetActive(false);
+            npcNext.SetActive(false);
         } else
         {
-            npcUI.TweenShut();
+            playerNext.SetActive(true);
+            npcNext.SetActive(true);
         }
 
-            if (dialogueActive == true)
-        {
-            npcHintUI.TweenShut();
-        }
-
-        if (Input.GetMouseButtonDown(0) && dialogueActive == true)
+        if (Input.GetMouseButtonDown(0) && dialogueActive == true && clicked == false && startNum != 0)
         {
 
-            startNum++;
 
             if (startNum >= dialogue.Length)
             {
@@ -81,29 +82,33 @@ public class scr_dialogueWithNPC : MonoBehaviour
 
                 if (startNum % 2 == 0) // this will always be the NPC text
                 {
-                    soundPlayer.PlayOneShot(npcSOUND);
 
+                    Debug.Log("NPC Dialogue Opening");
                     playerUI.TweenShut();
-                    playerText.text = "";
-
+                    soundPlayer.PlayOneShot(npcSOUND);
                     npcUI.TweenOpen();
                     npcText.text = dialogue[startNum];
+                    clicked = true;
 
-                    playerUI.TweenShut();
-                    playerText.text = "";
+
 
                 }
                 else // this will always be the player text
                 {
-                    npcUI.TweenShut();
-                    npcText.text = "";
 
+                    Debug.Log("PC Dialogue Opening");
+                    npcUI.TweenShut();
+                    soundPlayer.PlayOneShot(playerSound);
                     playerUI.TweenOpen();
                     playerText.text = dialogue[startNum];
+                    clicked = true;
 
-                    npcUI.TweenShut();
-                    npcText.text = "";
+
                 }
+
+                startNum++;
+
+                StartCoroutine(ClickReset());
             }
         }
     }
@@ -128,6 +133,7 @@ public class scr_dialogueWithNPC : MonoBehaviour
             if (Input.GetMouseButton(1) && dialogueActive == false)
             {
 
+                Debug.Log("Start Dialogue Opening");
                 npcHintUI.TweenShut();
 
                 //Turns off player motion control
@@ -144,6 +150,8 @@ public class scr_dialogueWithNPC : MonoBehaviour
 
                 //set the dialogue to true
                 dialogueActive = true;
+                
+                startNum++;
             }
 
             if (dialogueActive == false)
@@ -157,7 +165,16 @@ public class scr_dialogueWithNPC : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        npcHintUI.TweenShut();
+       if(other.name == player.name)
+        {
+            npcHintUI.TweenShut();
+        }
+    }
+
+    IEnumerator ClickReset()
+    {
+        yield return new WaitForSeconds(1f);
+        clicked = false;
     }
 
 }

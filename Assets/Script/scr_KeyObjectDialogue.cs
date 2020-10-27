@@ -12,6 +12,11 @@ public class scr_KeyObjectDialogue : MonoBehaviour
     public Text hintUItext;
     public GameObject hintUIbutton;
     public GameObject hintUIParent;
+    public string hintNewText;
+
+    public AudioSource soundPlayer;
+    public AudioClip playerSound;
+    bool audioPlayed = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,8 +24,9 @@ public class scr_KeyObjectDialogue : MonoBehaviour
 
         if(other.name == player.name)
         {
+            uiElement.gameObject.SetActive(true);
             Debug.Log("entered");
-            hintUItext.text = "Document";
+            hintUItext.text = hintNewText ;
             hintUIbutton.SetActive(true);
         }
     }
@@ -34,13 +40,28 @@ public class scr_KeyObjectDialogue : MonoBehaviour
                 hintUIParent.SetActive(false);
                 uiElement.TweenOpen();
                 uiText.text = itemDescription;
+                if(audioPlayed == false){
+                    soundPlayer.PlayOneShot(playerSound);
+                    audioPlayed = true;
+                }
             } else
             {
                 uiText.text = "";
                 uiElement.TweenShut();
+                audioPlayed = false;
+
             }
         }
 
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name == player.name)
+        {
+            uiElement.TweenShut();
+            uiElement.gameObject.SetActive(false);
+        }
     }
 
 }

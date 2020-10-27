@@ -21,7 +21,7 @@ public class zoomColorDetect : MonoBehaviour
     //when zoomed switch important objects to red
     public void ZoomSwitchRed()
     {
-        Debug.Log("hello world");
+        //Debug.Log("hello world");
 
         for (int i = 0; i < redObjects.Length; i++)
         {
