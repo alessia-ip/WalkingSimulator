@@ -16,6 +16,8 @@ public class displayItemUI : MonoBehaviour
     public GameObject helpText;
     public GameObject door;
 
+    public scr_PlayerWalkingDialogue changeString;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,8 @@ public class displayItemUI : MonoBehaviour
             {
 
                 // here is the film thing 
+                changeString.playerThought = "I guess I can head to my first interview. I’ll finally find out what really came first.";
+                changeString.uiText.text = changeString.playerThought;
                 globalVarStorage.hasFilm = true;
                 regFilm.enabled = false;
                 redFilm.enabled = false;

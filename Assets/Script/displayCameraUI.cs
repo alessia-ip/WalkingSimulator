@@ -13,6 +13,8 @@ public class displayCameraUI : MonoBehaviour
     public KeyCode pickUp;
     public GameObject interactObj;
 
+    public scr_PlayerWalkingDialogue changeString;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class displayCameraUI : MonoBehaviour
         if(Input.GetKeyDown(pickUp) && displayInfo)
         {
             ItemPickUp();
+
         }
     }
 
@@ -35,6 +38,7 @@ public class displayCameraUI : MonoBehaviour
         displayInfo = true;
         myText.text = myString;
         myText.color = Color.white;
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -71,6 +75,8 @@ public class displayCameraUI : MonoBehaviour
 
     void ItemPickUp()
     {
+        changeString.playerThought = "This camera is worthless without film. I’ll need to grab some. I can’t believe my editor is letting me write about such a big question.";
+        changeString.uiText.text = changeString.playerThought;
         globalVarStorage.hasCamera = true;
         displayGlobalUI.uiNum = "zoomHowTo";
         displayInfo = false;
