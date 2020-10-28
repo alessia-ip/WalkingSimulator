@@ -71,7 +71,7 @@ MonoBehaviour:
     value: 0
   keyValue:
     overrideState: 1
-    value: 2.5
+    value: 2.7
   eyeAdaptation:
     overrideState: 0
     value: 0
@@ -152,10 +152,10 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.2
+    value: 0.5
   contrast:
     overrideState: 1
-    value: 36.4
+    value: 20
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
